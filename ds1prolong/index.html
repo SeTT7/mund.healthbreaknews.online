@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "y3zh19ouqq");
+  </script>
+  <script src="https://upsell.mundpay.com/script-v2.js" defer async></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dernière Chance — Prolong Power</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    *{box-sizing:border-box;-webkit-tap-highlight-color:transparent;margin:0;padding:0}
+    html,body{background:#fff;font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;color:#0A1230;line-height:1.6}
+
+    @keyframes cta-pulse{
+      0%,100%{box-shadow:0 12px 32px -8px #DC2626CC,0 0 0 0 #DC262644,inset 0 1px 0 rgba(255,255,255,.3)}
+      50%{box-shadow:0 12px 32px -8px #DC2626CC,0 0 0 12px #DC262600,inset 0 1px 0 rgba(255,255,255,.3)}
+    }
+    @keyframes urgent-flash{0%,100%{background:#DC2626}50%{background:#991B1B}}
+    @keyframes fade-in{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes shake{0%,100%{transform:translateX(0)}20%{transform:translateX(-4px)}40%{transform:translateX(4px)}60%{transform:translateX(-3px)}80%{transform:translateX(3px)}}
+
+    /* ── Attention bar ── */
+    .attention-bar{
+      width:100%;padding:11px 16px;text-align:center;
+      font-size:13px;font-weight:800;letter-spacing:.02em;color:#fff;
+      animation:urgent-flash 1.5s ease-in-out infinite;
+      position:sticky;top:0;z-index:999;
+    }
+
+    /* ── Header ── */
+    .top-header{width:100%;padding:14px 20px;border-bottom:1px solid #EAF0FF;text-align:center;background:#fff}
+    .top-header span{font-size:20px;font-weight:900;letter-spacing:-.03em;color:#3B6FFF}
+
+    /* ── Hero — rouge pour downsell ── */
+    .hero{position:relative;overflow:hidden;padding:30px 20px 26px;text-align:center;
+      background:radial-gradient(at center top,#7f0000 0%,#1a0000 70%);color:#fff}
+    .badge-wait{
+      display:inline-flex;align-items:center;gap:6px;padding:8px 18px;border-radius:999px;
+      margin-bottom:14px;text-transform:uppercase;letter-spacing:.05em;font-size:12px;font-weight:900;
+      background:#fff;color:#DC2626;animation:shake 0.6s ease 1s both}
+    .hero h1{font-size:22px;font-weight:900;letter-spacing:-.03em;line-height:1.25;max-width:420px;margin:0 auto}
+    .hero p.hero-sub{font-size:13px;color:rgba(255,255,255,.7);margin-top:10px;max-width:360px;margin-left:auto;margin-right:auto}
+
+    /* ── Layout ── */
+    .wrap{max-width:480px;margin:0 auto;padding:28px 18px 50px}
+
+    /* ── Copy ── */
+    .copy-block p{font-size:14px;color:#444;margin-bottom:14px;line-height:1.7}
+    .hl{font-weight:700;color:#0A1230}
+    .hl-red{font-weight:800;color:#DC2626}
+
+    /* ── Callout box ── */
+    .callout{
+      background:linear-gradient(135deg,#fff5f5,#fff);border:2px solid #DC2626;
+      border-radius:16px;padding:20px 18px;margin:20px 0;text-align:center;
+    }
+    .callout-title{font-size:16px;font-weight:900;color:#DC2626;margin-bottom:6px}
+    .callout p{font-size:13px;color:#444;line-height:1.6}
+
+    /* ── Section title ── */
+    .section-title{font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;
+      color:#DC2626;text-align:center;margin:28px 0 16px}
+
+    /* ── Divider ── */
+    .divider{height:1px;background:linear-gradient(90deg,transparent,#EAF0FF,transparent);margin:24px 0}
+
+    /* ── Product card ── */
+    .product-card{
+      background:#fff;border:2px solid #DC2626;border-radius:20px;padding:24px 20px;
+      box-shadow:0 8px 40px -12px rgba(220,38,38,.25);text-align:center;
+      animation:fade-in .4s ease both;
+    }
+    .product-img{
+      width:140px;height:140px;object-fit:cover;border-radius:14px;
+      box-shadow:0 6px 20px rgba(0,0,0,.12);margin:0 auto 16px;display:block;
+    }
+    .product-name{font-size:16px;font-weight:800;color:#0A1230;margin-bottom:12px}
+    .price-old{font-size:13px;color:#5A6B85;margin-bottom:4px}
+    .price-old span{text-decoration:line-through}
+    .price-new{font-size:52px;font-weight:900;color:#DC2626;letter-spacing:-.03em;line-height:1;margin-bottom:6px}
+    .price-sub{font-size:12px;color:#DC2626;font-weight:700;text-transform:uppercase;letter-spacing:.04em;margin-bottom:20px}
+    .economy-badge{
+      display:inline-block;background:#DC2626;color:#fff;font-size:12px;font-weight:800;
+      padding:5px 14px;border-radius:999px;margin-bottom:20px;letter-spacing:.03em;
+    }
+
+    /* ── Guarantee ── */
+    .guarantee{background:#EAF0FF;border-radius:16px;padding:20px;margin-top:20px}
+    .guarantee-title{font-size:14px;font-weight:800;color:#0A1230;margin-bottom:8px}
+    .guarantee p{font-size:12px;color:#1A2547;line-height:1.6}
+
+    /* ── Timer faux ── */
+    .timer-box{
+      background:#0A1230;border-radius:14px;padding:14px;text-align:center;margin:20px 0;
+    }
+    .timer-label{font-size:11px;font-weight:700;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px}
+    .timer-digits{font-size:32px;font-weight:900;color:#fff;letter-spacing:.04em;font-variant-numeric:tabular-nums}
+    .timer-sub{font-size:11px;color:rgba(255,255,255,.4);margin-top:4px}
+  </style>
+</head>
+<body>
+
+  <!-- Attention bar -->
+  <div class="attention-bar">⚠️  ATTENDEZ ! Cette offre expire dans quelques minutes</div>
+
+  <!-- Header -->
+  <div class="top-header"><span>Prolong Power</span></div>
+
+  <!-- Hero -->
+  <div class="hero">
+    <span class="badge-wait">🛑 Attendez — Ne partez pas encore</span>
+    <h1>VOTRE DERNIÈRE CHANCE D'OBTENIR LE PROTOCOLE PREMIUM</h1>
+    <p class="hero-sub">Nous avons vu que vous avez refusé l'offre — et nous comprenons. C'est pourquoi nous faisons quelque chose que nous ne faisons jamais.</p>
+  </div>
+
+  <div class="wrap">
+
+    <!-- Copy -->
+    <div class="copy-block">
+      <p>Je vais être honnête avec vous, directement.</p>
+
+      <p>J'ai vu que vous avez quitté la page de l'offre du <span class="hl">Protocole Prolong Power Premium</span>. Et je comprends — parfois, même quand on veut quelque chose, le prix peut être un obstacle.</p>
+
+      <p>Mais je ne veux pas que vous repartiez sans la meilleure version possible de votre protocole.</p>
+
+      <p>Alors je fais quelque chose d'exceptionnel, que je ne répéterai pas.</p>
+
+      <div class="callout">
+        <p class="callout-title">🎯 Offre de Dernière Chance</p>
+        <p>Pour vous spécifiquement — et uniquement sur cette page — je vous offre le <strong>Protocole Prolong Power Premium</strong> à un prix que personne d'autre ne verra jamais.</p>
+      </div>
+
+      <p>Pourquoi ? Parce que je sais que les hommes qui ont déjà fait l'effort d'acquérir le <span class="hl">Prolong Power</span> méritent d'avoir accès à la combinaison complète.</p>
+
+      <p>Et je préfère vous le donner à un prix réduit que de vous laisser sans les résultats maximaux que vous pouvez atteindre.</p>
+
+      <p>Rappelez-vous : le <span class="hl">Protocole Prolong Power Premium</span> est le "turbo" du Prolong Power. Sans lui, vous obtiendrez des résultats. Avec lui, vous obtiendrez des résultats <span class="hl-red">extraordinaires</span>.</p>
+
+      <p>Des hommes qui ont utilisé les deux ensemble m'ont dit que leurs partenaires ont immédiatement remarqué la différence. Plus d'énergie, plus d'endurance, une confiance retrouvée comme à 20 ans.</p>
+
+      <p>Et aujourd'hui, vous pouvez obtenir tout cela pour presque rien.</p>
+
+      <p>Je ne propose cette remise à personne d'autre. C'est uniquement pour vous, ici, maintenant.</p>
+
+      <p><span class="hl-red">Si vous fermez cette page, cette offre disparaît pour toujours.</span> Il n'y a pas de deuxième chance.</p>
+
+      <p>Prenez la décision intelligente. Votre partenaire vous remerciera ce soir.</p>
+    </div>
+
+    <!-- Timer -->
+    <div class="timer-box">
+      <p class="timer-label">Cette offre expire dans</p>
+      <p class="timer-digits" id="timer">14:59</p>
+      <p class="timer-sub">Après ça, le prix revient à 35 €</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Product + Mundpay -->
+    <p class="section-title">🔥 Offre Finale — Plus Jamais Ce Prix</p>
+
+    <div class="product-card">
+      <img class="product-img" src="img/1.jpeg" alt="Protocole Power Premium">
+      <p class="product-name">Protocole Prolong Power Premium</p>
+      <p class="price-old">Precio normal : <span>35,00 €</span></p>
+      <p class="price-new">20,00 €</p>
+      <span class="economy-badge">Vous économisez 15 € — Offre unique</span>
+      <p class="price-sub">⚡ Dernière chance — Cette page seulement</p>
+
+      <div data-mndpay-render="01a059d8-478c-712e-89e3-5f86fb628e2c"></div>
+    </div>
+
+    <!-- Guarantee -->
+    <div class="guarantee">
+      <p class="guarantee-title">🛡️ Garantie 30 jours — Risque zéro</p>
+      <p>Essayez pendant 30 jours complets. Si pour une raison quelconque vous n'êtes pas satisfait, nous vous remboursons 100 % de votre argent. Sans questions, sans complications.</p>
+    </div>
+
+  </div>
+
+  <script>
+    // Countdown 15 min
+    var s = 14 * 60 + 59;
+    var el = document.getElementById('timer');
+    var iv = setInterval(function(){
+      if (s <= 0) { clearInterval(iv); el.textContent = '00:00'; return; }
+      s--;
+      var m = Math.floor(s / 60), sec = s % 60;
+      el.textContent = (m < 10 ? '0' : '') + m + ':' + (sec < 10 ? '0' : '') + sec;
+    }, 1000);
+  </script>
+
+</body>
+</html>
