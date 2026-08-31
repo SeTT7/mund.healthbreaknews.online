@@ -1,0 +1,220 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+<script src="https://upsell.mundpay.com/script-v2.js" defer async></script>
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "y3zh19ouqq");
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Offre Exclusive — Prolong Power</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent;margin:0;padding:0}
+  html,body{background:#fff;font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;color:#0A1230;line-height:1.6}
+
+  @keyframes cta-pulse{
+    0%,100%{box-shadow:0 12px 32px -8px #3B6FFFCC,0 0 0 0 #3B6FFF44,inset 0 1px 0 rgba(255,255,255,.3)}
+    50%{box-shadow:0 12px 32px -8px #3B6FFFCC,0 0 0 12px #3B6FFF00,inset 0 1px 0 rgba(255,255,255,.3)}
+  }
+  @keyframes urgent-flash{0%,100%{background:#DC2626}50%{background:#B91C1C}}
+  @keyframes fade-in{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+
+  /* ── Header ── */
+  .top-header{width:100%;padding:14px 20px;border-bottom:1px solid #EAF0FF;text-align:center;background:#fff}
+  .top-header span{font-size:20px;font-weight:900;letter-spacing:-.03em;color:#3B6FFF}
+
+  /* ── Hero ── */
+  .hero{position:relative;overflow:hidden;padding:30px 20px 26px;text-align:center;
+    background:radial-gradient(at center top,#0A1230 0%,#050810 70%);color:#fff}
+  .badge-urgent{
+    display:inline-flex;align-items:center;gap:6px;padding:6px 14px;border-radius:999px;
+    margin-bottom:14px;text-transform:uppercase;letter-spacing:.04em;font-size:11px;font-weight:900;
+    animation:urgent-flash 1.5s ease-in-out infinite}
+  .hero h1{font-size:22px;font-weight:900;letter-spacing:-.03em;line-height:1.25;max-width:420px;margin:0 auto}
+
+  /* ── Layout ── */
+  .wrap{max-width:480px;margin:0 auto;padding:28px 18px 50px}
+
+  /* ── Intro ── */
+  .intro-text p{font-size:14px;color:#444;margin-bottom:13px}
+  .hl{font-weight:700;color:#0A1230}
+
+  /* ── Pack section ── */
+  .section-title{font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;
+    color:#3B6FFF;text-align:center;margin:28px 0 16px}
+
+  .pack-card{
+    background:#fff;border:1px solid #EAF0FF;border-radius:18px;padding:18px;margin-bottom:14px;
+    display:flex;gap:14px;align-items:flex-start;
+    box-shadow:0 4px 20px -6px rgba(59,111,255,.12);
+    animation:fade-in .4s ease both}
+  .pack-card img{width:80px;height:80px;object-fit:cover;border-radius:12px;flex-shrink:0;border:1px solid #EAF0FF}
+  .pack-card-body{flex:1;min-width:0}
+  .pack-card-name{font-size:14px;font-weight:800;color:#3B6FFF;margin-bottom:5px}
+  .pack-card-desc{font-size:12px;color:#555;line-height:1.5}
+  .pack-tag{display:inline-block;background:#EAF0FF;color:#3B6FFF;font-size:10px;font-weight:700;
+    text-transform:uppercase;letter-spacing:.05em;border-radius:999px;padding:2px 8px;margin-bottom:6px}
+
+  /* ── Testimonials ── */
+  .testi-grid{display:flex;flex-direction:column;gap:12px;margin:0 0 24px}
+  .testi-card{background:#F8FAFF;border:1px solid #EAF0FF;border-radius:14px;padding:16px}
+  .testi-top{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+  .testi-avatar{width:44px;height:44px;border-radius:50%;object-fit:cover;border:2px solid #EAF0FF;flex-shrink:0}
+  .testi-name{font-size:13px;font-weight:800;color:#0A1230}
+  .testi-stars{color:#F5B84A;font-size:13px;letter-spacing:1px}
+  .testi-text{font-size:13px;color:#444;line-height:1.55;font-style:italic}
+
+  /* ── Price block ── */
+  .price-block{text-align:center;padding:24px 0 10px}
+  .price-old{font-size:14px;color:#5A6B85;margin-bottom:4px}
+  .price-old span{text-decoration:line-through}
+  .price-new{font-size:48px;font-weight:900;color:#3B6FFF;letter-spacing:-.03em;line-height:1}
+  .price-sub{font-size:12px;color:#DC2626;font-weight:700;margin-top:6px;text-transform:uppercase;letter-spacing:.04em}
+
+  /* ── Buttons ── */
+  .btn-group{display:flex;flex-direction:column;gap:10px;margin-top:20px}
+  .btn{
+    display:block;width:100%;padding:17px 20px;border-radius:14px;font-size:16px;font-weight:800;
+    text-align:center;text-decoration:none;border:none;cursor:pointer;transition:opacity .2s,transform .1s;
+    font-family:inherit;line-height:1.2}
+  .btn:active{transform:scale(.98)}
+  .btn-accept{background:linear-gradient(135deg,#3B6FFF 0%,#0A1230 100%);color:#fff;animation:cta-pulse 2s ease-out infinite}
+  .btn-accept:hover{opacity:.93}
+  .btn-decline{background:#F0F2F8;color:#8895A7;font-size:13px;padding:13px 20px}
+  .btn-decline:hover{opacity:.8}
+
+  /* ── Guarantee ── */
+  .guarantee{background:#EAF0FF;border-radius:16px;padding:20px;margin-top:10px}
+  .guarantee-title{font-size:14px;font-weight:800;color:#0A1230;margin-bottom:8px;display:flex;align-items:center;gap:8px}
+  .guarantee p{font-size:12px;color:#1A2547;line-height:1.6}
+
+  /* ── Divider ── */
+  .divider{height:1px;background:linear-gradient(90deg,transparent,#EAF0FF,transparent);margin:24px 0}
+
+  /* ── Value list ── */
+  .value-list{list-style:none;padding:0;margin:0 0 18px}
+  .value-list li{font-size:13px;color:#444;padding:7px 0;border-bottom:1px solid #F0F2F8;display:flex;align-items:flex-start;gap:8px}
+  .value-list li:last-child{border-bottom:none}
+  .value-list li::before{content:'✦';color:#3B6FFF;font-size:11px;flex-shrink:0;margin-top:2px}
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="top-header"><span>Prolong Power</span></div>
+
+<!-- Hero -->
+<div class="hero">
+  <span class="badge-urgent">⚠️ Lisez avant de continuer</span>
+  <h1>LISEZ JUSQU'À LA FIN POUR COMPLÉTER VOTRE ACHAT</h1>
+</div>
+
+<div class="wrap">
+
+  <!-- Intro -->
+  <div class="intro-text">
+    <p>Félicitations ! En obtenant la <span class="hl">Formule Prolong Power</span>, vous avez fait le premier pas pour surmonter les problèmes d'impuissance et retrouver vos performances.</p>
+    <p>Mais laissez-moi vous poser une question : pensez-vous que votre partenaire est prête pour ce qui arrive ?</p>
+    <p>Imaginez : vous retrouvez vos performances, vous sentez votre énergie sexuelle revenir en force, vous vous sentez enfin libéré des limitations.</p>
+    <p>Mais que se passerait-il si vous pouviez faire <span class="hl">encore plus</span> ? Et si, en plus de surmonter l'impuissance, vous pouviez apporter encore plus de plaisir et retrouver une santé de fer ?</p>
+    <p>C'est exactement ce qu'offre le <span class="hl">Forfait Ultime de Virilité et de Plaisir</span>.</p>
+  </div>
+
+  <!-- Pack title -->
+  <p class="section-title">Ce qui est inclus dans le pack</p>
+
+  <!-- Product 1 -->
+  <div class="pack-card">
+    <img src="img/DEfKCm4203121.gif" alt="Le Maître du Plaisir" loading="lazy" style="filter:blur(2px)">
+    <div class="pack-card-body">
+      <span class="pack-tag">Guide numérique</span>
+      <p class="pack-card-name">Le Maître du Plaisir</p>
+      <p class="pack-card-desc">Techniques avancées du plaisir — le Mouvement Circulaire de la Langue, la Technique du Chocolat et des phrases psychologiques qui rendent l'expérience inoubliable.</p>
+    </div>
+  </div>
+
+  <!-- Product 2 -->
+  <div class="pack-card">
+    <img src="img/YJRLqR4203121.gif" alt="Recettes Ancestrales" loading="lazy">
+    <div class="pack-card-body">
+      <span class="pack-tag">Guide numérique</span>
+      <p class="pack-card-name">Recettes Ancestrales de Virilité</p>
+      <p class="pack-card-desc">Le Tonique Grec de Mathusalem, le Samson Tonic (testostérone +420 %) et la vitamine japonaise pour une endurance hors du commun.</p>
+    </div>
+  </div>
+
+  <!-- Product 3 -->
+  <div class="pack-card">
+    <img src="img/oBHKNF4203121.gif" alt="Thé Immunité" loading="lazy">
+    <div class="pack-card-body">
+      <span class="pack-tag">Guide numérique</span>
+      <p class="pack-card-name">Thé Immunité</p>
+      <p class="pack-card-desc">Élimine les douleurs, contrôle la pression artérielle, stimule la croissance des cheveux et booste votre immunité pour une vie longue et saine.</p>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- Social proof header -->
+  <p class="section-title">Plus de 10 000 hommes ont déjà transformé leur vie</p>
+
+  <!-- Testimonials -->
+  <div class="testi-grid">
+    <div class="testi-card">
+      <div class="testi-top">
+        <img class="testi-avatar" src="img/RoCNMS9799726.jpeg" alt="Paul Jonathan">
+        <div>
+          <p class="testi-name">Paul Jonathan</p>
+          <p class="testi-stars">★★★★★</p>
+        </div>
+      </div>
+      <p class="testi-text">« J'ai guéri ma dysfonction érectile, mais je me rendais compte qu'il manquait quelque chose. Cela a changé lorsque j'ai commencé à utiliser le Forfait Ultime — ma santé s'est améliorée et maintenant je sais comment satisfaire une femme. »</p>
+    </div>
+    <div class="testi-card">
+      <div class="testi-top">
+        <img class="testi-avatar" src="img/MKhsGs9799726.jpeg" alt="Kevin Richard">
+        <div>
+          <p class="testi-name">Kevin Richard</p>
+          <p class="testi-stars">★★★★★</p>
+        </div>
+      </div>
+      <p class="testi-text">« Je pensais que c'était juste une question de pénétration, mais maintenant je sais comment donner plus de plaisir et mieux prendre soin de moi. Merci, mon frère ! »</p>
+    </div>
+  </div>
+
+  <!-- Mundpay upsell render -->
+  <div data-mndpay-render="01a059ca-b228-71ee-a3a8-1f55bec7460b"></div>
+
+  <!--
+  <div style="background:#fff;border:1px solid #EAF0FF;border-radius:20px;padding:24px;text-align:center;box-shadow:0 20px 50px -12px rgba(59,111,255,.15)">
+    <p style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#5A6B85;margin-bottom:12px">Le Forfait Ultime de Virilité et de Plaisir</p>
+    <div class="price-old">Valeur réelle : <span>375 €</span></div>
+    <div class="price-new">27 €</div>
+    <p class="price-sub">⚡ Économisez 348 € aujourd'hui seulement</p>
+
+    <div class="btn-group">
+      <a href="https://hmij.mycartpanda.com/ex-ocu/next-offer/9PYD19zjNM?accepted=yes" class="btn btn-accept">
+        Oui, je veux le Forfait Ultime →
+      </a>
+      <a href="https://hmij.mycartpanda.com/ex-ocu/next-offer/9PYD19zjNM?accepted=no" class="btn btn-decline">
+        Non, je ne veux pas profiter de cette opportunité
+      </a>
+    </div>
+  </div>
+  -->
+
+  <!-- Guarantee -->
+  <div class="guarantee" style="margin-top:20px">
+    <p class="guarantee-title">🛡️ Garantie 60 jours — Risque zéro</p>
+    <p>Essayez le Forfait Ultime pendant 60 jours complets. Si pour une raison quelconque vous n'êtes pas entièrement satisfait, nous vous remboursons 100 % de votre argent. Sans questions, sans complications.</p>
+  </div>
+
+
+</div>
+</body>
+</html>
