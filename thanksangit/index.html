@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<title>Il Richiamo del Mio Angelo — Accedi alla Tua Guida</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  @page {
+    size: A4 portrait;
+    margin: 0;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 210mm; height: 297mm; }
+  body {
+    font-family: 'Lora', Georgia, serif;
+    background: radial-gradient(ellipse at 50% -10%, #2A1908 0%, #160E08 55%, #0A0705 100%);
+    color: #F5F0E8;
+    overflow: hidden;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    position: relative;
+  }
+
+  .page {
+    width: 210mm; height: 297mm;
+    padding: 30mm 22mm 26mm;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: space-between;
+    position: relative;
+    text-align: center;
+  }
+
+  /* RAYS BG */
+  .rays {
+    position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+    width: 200mm; height: 130mm; pointer-events: none; opacity: 0.07;
+  }
+
+  /* Soft halo glow behind halo */
+  .halo-glow {
+    position: absolute;
+    top: 22mm; left: 50%; transform: translateX(-50%);
+    width: 130mm; height: 130mm;
+    background: radial-gradient(circle, rgba(248,229,176,0.22) 0%, rgba(248,229,176,0.05) 40%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* TOP — Halo */
+  .halo {
+    position: relative; width: 50mm; height: 50mm;
+    margin: 6mm auto 8mm;
+    z-index: 2;
+  }
+  .halo svg { width: 100%; height: 100%; display: block; }
+
+  /* TITLE */
+  .eyebrow {
+    font-family: 'Cinzel', serif; font-size: 11pt; letter-spacing: 4pt;
+    color: #F8E5B0; text-transform: uppercase; margin-bottom: 8mm;
+    z-index: 2; position: relative;
+  }
+  .headline {
+    font-family: 'Cinzel', serif; font-size: 26pt; font-weight: 900;
+    line-height: 1.18; color: #FFFFFF;
+    max-width: 150mm; margin: 0 auto 7mm;
+    letter-spacing: 0.5pt;
+    z-index: 2; position: relative;
+  }
+  .headline .gold {
+    color: #FFF5E0;
+    text-shadow: 0 0 18px rgba(248,229,176,0.45);
+  }
+
+  .sub {
+    font-family: 'Lora', serif; font-size: 13pt;
+    color: #EDDDC0; font-style: italic; line-height: 1.55;
+    max-width: 130mm; margin: 0 auto 14mm;
+    z-index: 2; position: relative;
+  }
+
+  /* DIVIDER */
+  .divider {
+    display: flex; align-items: center; justify-content: center;
+    gap: 12px; width: 90mm; margin: 0 auto 12mm;
+    z-index: 2; position: relative;
+  }
+  .divider::before, .divider::after {
+    content: ''; flex: 1; height: 1px;
+    background: linear-gradient(to right, transparent, #8B6914, transparent);
+  }
+  .divider span { color: #F8E5B0; font-size: 13pt; }
+
+  /* CTA BUTTON */
+  .cta-wrap {
+    z-index: 2; position: relative;
+    width: 100%; display: flex; flex-direction: column; align-items: center;
+    margin-top: 4mm;
+  }
+  .cta-btn {
+    display: inline-flex; flex-direction: column; align-items: center;
+    background: linear-gradient(135deg, #F8E5B0 0%, #C9A84C 100%);
+    color: #160E08; font-family: 'Cinzel', serif;
+    font-size: 15pt; font-weight: 900;
+    padding: 7mm 14mm; border-radius: 3mm; text-decoration: none;
+    letter-spacing: 1.5pt; text-transform: uppercase;
+    box-shadow:
+      0 6mm 14mm rgba(212,169,61,0.45),
+      0 0 0 1px rgba(255,245,224,0.5),
+      inset 0 1px 0 rgba(255,255,255,0.45);
+    border: none;
+    max-width: 130mm; width: 100%;
+    text-align: center;
+  }
+  .cta-btn .btn-star {
+    color: #FFFFFF;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.45), 0 0 8px rgba(255,255,255,0.4);
+    font-weight: 900;
+    display: inline;
+  }
+  .cta-btn .btn-main {
+    display: block; margin: 0 0 3mm;
+  }
+  .cta-btn .btn-sub {
+    font-family: 'Lora', serif; font-size: 10pt;
+    font-weight: 400; font-style: italic;
+    color: #1d1408; text-transform: none; letter-spacing: 0;
+    opacity: 0.9;
+  }
+
+  .cta-url {
+    font-family: 'Lora', serif; font-size: 11pt;
+    color: #F8E5B0; margin-top: 8mm;
+    z-index: 2; position: relative;
+    word-break: break-all;
+  }
+  .cta-url a { color: #F8E5B0; text-decoration: none; }
+
+  .tagline {
+    font-family: 'Cinzel', serif; font-size: 10pt;
+    letter-spacing: 3pt; text-transform: uppercase;
+    color: #F8E5B0; margin-top: 10mm;
+    z-index: 2; position: relative;
+  }
+  .tagline-sub {
+    margin-top: 3mm;
+    font-family: 'Lora', serif; font-size: 10pt;
+    color: #8E7C66; font-style: italic;
+    z-index: 2; position: relative;
+  }
+
+  /* FOOTER */
+  .footer {
+    width: 100%; text-align: center;
+    font-family: 'Lora', serif; font-size: 8pt;
+    color: #5a4e3e; line-height: 1.5;
+    z-index: 2; position: relative;
+    padding-top: 10mm;
+    border-top: 1px solid rgba(201,168,76,0.18);
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+  <svg class="rays" viewBox="0 0 800 380" xmlns="http://www.w3.org/2000/svg">
+    <g transform="translate(400,0)">
+      <line x1="0" y1="0" x2="-400" y2="380" stroke="#C9A84C" stroke-width="1"/>
+      <line x1="0" y1="0" x2="-260" y2="380" stroke="#C9A84C" stroke-width="1"/>
+      <line x1="0" y1="0" x2="-130" y2="380" stroke="#C9A84C" stroke-width="1"/>
+      <line x1="0" y1="0" x2="0"    y2="380" stroke="#C9A84C" stroke-width="1"/>
+      <line x1="0" y1="0" x2="130"  y2="380" stroke="#C9A84C" stroke-width="1"/>
+      <line x1="0" y1="0" x2="260"  y2="380" stroke="#C9A84C" stroke-width="1"/>
+      <line x1="0" y1="0" x2="400"  y2="380" stroke="#C9A84C" stroke-width="1"/>
+    </g>
+  </svg>
+
+  <div class="halo-glow"></div>
+
+  <div style="width: 100%; flex: 1; display: flex; flex-direction: column; align-items: center;">
+
+    <div class="halo">
+      <svg viewBox="0 0 110 110" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <radialGradient id="g1" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#FFF5E0"/>
+            <stop offset="60%" stop-color="#F8E5B0"/>
+            <stop offset="100%" stop-color="#8B6914"/>
+          </radialGradient>
+        </defs>
+        <circle cx="55" cy="55" r="50" fill="none" stroke="url(#g1)" stroke-width="1.2" opacity="0.55"/>
+        <circle cx="55" cy="55" r="42" fill="#0A0705" stroke="url(#g1)" stroke-width="1.6"/>
+        <path d="M 36 56 L 50 71 L 76 42" fill="none" stroke="url(#g1)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+        <g fill="#FFF5E0">
+          <circle cx="55" cy="0" r="1.6"/>
+          <circle cx="94" cy="16" r="1.4" opacity="0.85"/>
+          <circle cx="16" cy="16" r="1.4" opacity="0.85"/>
+          <circle cx="110" cy="55" r="1.2" opacity="0.7"/>
+          <circle cx="0" cy="55" r="1.2" opacity="0.7"/>
+        </g>
+      </svg>
+    </div>
+
+    <p class="eyebrow">✦ Grazie ✦</p>
+    <h1 class="headline">
+      La Tua Guida Per Connetterti Con<br>
+      <span class="gold">L'Arcangelo Michele</span> È Pronta
+    </h1>
+    <p class="sub">
+      Il cammino verso il cielo è ora nelle tue mani.<br>
+      Clicca il pulsante qui sotto per accedere alla tua guida sacra.
+    </p>
+
+    <div class="divider"><span>✦</span></div>
+
+    <div class="cta-wrap">
+      <a class="cta-btn" href="https://app.lifegoodfr.online">
+        <span class="btn-main"><span class="btn-star">✦</span> ACCEDI ALLA MIA GUIDA <span class="btn-star">✦</span></span>
+        <span class="btn-sub">Il Richiamo del Mio Angelo · Accesso immediato</span>
+      </a>
+
+      <p class="tagline">✦ Accesso a Vita ✦</p>
+      <p class="tagline-sub">Accedi a Il Richiamo del Mio Angelo su tutti i tuoi dispositivi.</p>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    © Il Richiamo del Mio Angelo · Tutti i diritti riservati.<br>
+    Conserva questo PDF al sicuro — contiene il tuo link di accesso personale.
+  </div>
+</div>
+
+</body>
+</html>
