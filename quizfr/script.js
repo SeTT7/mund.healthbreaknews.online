@@ -266,7 +266,7 @@
   function initFinalPage() {
     var seen = new WeakSet();
     function appendQueryToCheckoutLinks() {
-      document.querySelectorAll('#step-23 a[href^="https://pay.mycheckoutt.com/019a1218-973d-71eb-9b04-b7b3635efb8d?ref="]').forEach(function (a) {
+      document.querySelectorAll('#step-23 a[href^="https://pay.mycheckoutt.com/01a15951-7b5b-702a-aa8a-f95ba044b0d2?ref="]').forEach(function (a) {
         if (seen.has(a)) return;
         seen.add(a);
         a.href = appendQuery(a.getAttribute('href'));
